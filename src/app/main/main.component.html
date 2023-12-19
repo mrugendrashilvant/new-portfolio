@@ -1,19 +1,30 @@
 <div class="h-screen">
-  <div class="h-full flex justify-center items-end">
-    <div class="w-full md:w-1/2 profile_bg relative">
-      <div #profilePicBg (mouseleave)="resetEyes($event)" (mousemove)="moveEyes($event)" class="profile_mouse absolute z-20"></div>
-      <div class="goggles w-18 md:w-36 flex justify-between items-start absolute">
-        <div class="bg-slate-900 w-8 h-5 md:w-16 md:h-8 goggles_left relative">
+  <div class="h-full flex justify-center items-end relative">
+<!--
+    <div class="z-10 w-full md:w-2/5 profile_bg relative">
+      <div #profilePicBg (mouseleave)="resetEyes($event)" (mousemove)="moveEyes($event)"
+           class="profile_mouse absolute z-20"></div>
+      <div class="goggles w-18 md:w-28 flex justify-between items-start absolute">
+        <div class="bg-slate-900 w-8 h-5 md:w-12 md:h-8 goggles_left relative">
           <span #leftEye class="md:w-3 md:h-4 w-2 h-2 absolute top-1/2 left-1/2 eyes"></span>
         </div>
         <div class="bg-slate-900 w-3 h-2 md:w-4 md:h-3"></div>
-        <div class="bg-slate-900 w-8 h-5 md:w-16 md:h-8 goggles_right relative">
+        <div class="bg-slate-900 w-8 h-5 md:w-12 md:h-8 goggles_right relative">
           <span #rightEye class="md:w-3 md:h-4 w-2 h-2 absolute top-1/2 left-1/2 eyes"></span>
         </div>
       </div>
 
       <img class="object-cover relative z-10" alt="Mrugendra Shilvant" src="assets/images/me.png">
-      <img alt="" class="object-cover absolute -top-5 profile_circle" src="assets/images/inner_circle.png">
+      <img alt="" class="object-cover absolute hidden md:block -top-5 profile_circle"
+           src="assets/images/inner_circle.png">
+    </div>
+  -->
+    <div class="z-0 md:w-1/2 md:h-3/4 w-3/4 h-2/5 border-2 absolute">
+      <app-skill [skill]="'HTML'" class="absolute top-1/2 left-0"></app-skill>
+      <app-skill [skill]="'NodeJS'" class="absolute top-1/4 left-1/4"></app-skill>
+      <app-skill [skill]="'CSS'" class="absolute top-0 left-1/2"></app-skill>
+      <app-skill [skill]="'Angular'" class="absolute top-1/2 left-full"></app-skill>
+      <app-skill [skill]="'Typescript'" class="absolute top-1/4 left-3/4"></app-skill>
     </div>
   </div>
 </div>

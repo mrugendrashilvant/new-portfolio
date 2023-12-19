@@ -9,9 +9,16 @@ export class MainComponent implements AfterViewInit{
   @ViewChild("leftEye") leftEye!: ElementRef<HTMLSpanElement>;
   @ViewChild("rightEye") rightEye!: ElementRef<HTMLSpanElement>;
   @ViewChild("profilePicBg") profilePicBg!: ElementRef<HTMLDivElement>;
+  @ViewChild("skillsCirlce") skillsScircle!: ElementRef<HTMLDivElement>;
 
   ngAfterViewInit() {
-    console.log(this.leftEye);
+  }
+
+  toggleRotation(stopRotate:boolean) {
+    console.log(stopRotate);
+    if(stopRotate) {
+      this.skillsScircle.nativeElement.style.animation = "none";
+    }
   }
 
   resetEyes(ev:MouseEvent) {
