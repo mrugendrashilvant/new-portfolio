@@ -10,8 +10,17 @@ export class MainComponent implements AfterViewInit{
   @ViewChild("rightEye") rightEye!: ElementRef<HTMLSpanElement>;
   @ViewChild("profilePicBg") profilePicBg!: ElementRef<HTMLDivElement>;
   @ViewChild("skillsCirlce") skillsScircle!: ElementRef<HTMLDivElement>;
+  activeSkill!: string;
 
   ngAfterViewInit() {
+  }
+
+  bringFront(skill: string) {
+    this.activeSkill = skill;
+  }
+
+  removeActiveSkill() {
+    this.activeSkill = "";
   }
 
   toggleRotation(stopRotate:boolean) {

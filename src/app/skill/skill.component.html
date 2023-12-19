@@ -1,5 +1,7 @@
-<div *ngIf="skill==='HTML'" class="w-20 h-20">
-  <div class="relative skill_wrapper">
+<div (mouseleave)="toggleDescription('HTML', false)"
+  *ngIf="skill==='HTML'" class="w-20 h-20">
+  <div (mouseenter)="toggleDescription('HTML', true)"
+    class="relative skill_wrapper">
     <ng-container *ngFor="let single of repeat">
       <svg style="transform: translateZ({{single+1}}px)" class="absolute skill top-0 left-0"
            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" id="html5">
@@ -8,11 +10,15 @@
       </svg>
     </ng-container>
   </div>
+  <ng-container *ngIf="description.HTML.show">
+    <app-skill-description (mouseenter)="toggleDescription('HTML', true)" [data]="description.HTML.data"></app-skill-description>
+  </ng-container>
 </div>
 
-<div *ngIf="skill==='CSS'" class="w-20 h-20">
-  <div (mouseleave)="toggleDescription('CSS')"
-       (mouseenter)="toggleDescription('CSS')"
+<div *ngIf="skill==='CSS'"
+     (mouseleave)="toggleDescription('CSS', false)"
+     class="w-20 h-20">
+  <div (mouseenter)="toggleDescription('CSS', true)"
         class="relative skill_wrapper">
     <ng-container *ngFor="let single of repeat">
       <svg style="transform: translateZ({{single+1}}px)" class="absolute skill top-0 left-0"
@@ -23,11 +29,14 @@
     </ng-container>
   </div>
   <ng-container *ngIf="description.CSS.show">
-    <app-skill-description [data]="description.CSS.data"></app-skill-description>
+    <app-skill-description (mouseenter)="toggleDescription('CSS', true)" [data]="description.CSS.data"></app-skill-description>
   </ng-container>
 </div>
-<div *ngIf="skill==='Angular'" class="w-20 h-20">
-  <div class="relative skill_wrapper">
+<div *ngIf="skill==='Angular'"
+     (mouseleave)="toggleDescription('Angular', false)"
+     class="w-20 h-20">
+  <div (mouseenter)="toggleDescription('Angular', true)"
+    class="relative skill_wrapper">
     <ng-container *ngFor="let single of repeat">
       <svg style="transform: translateZ({{single+1}}px)" class="absolute skill top-0 left-0"
            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Angular">
@@ -38,9 +47,15 @@
       </svg>
     </ng-container>
   </div>
+  <ng-container *ngIf="description.Angular.show">
+    <app-skill-description (mouseenter)="toggleDescription('Angular', true)" [data]="description.Angular.data"></app-skill-description>
+  </ng-container>
 </div>
-<div *ngIf="skill==='Typescript'" class="w-20 h-20">
-  <div class="relative skill_wrapper">
+<div *ngIf="skill==='Typescript'"
+     (mouseleave)="toggleDescription('Typescript', false)"
+     class="w-20 h-20">
+  <div (mouseenter)="toggleDescription('Typescript', true)"
+    class="relative skill_wrapper">
     <ng-container *ngFor="let single of repeat">
       <svg style="transform: translateZ({{single+1}}px)" class="absolute skill top-0 left-0"
            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Typescript">
@@ -50,9 +65,15 @@
       </svg>
     </ng-container>
   </div>
+  <ng-container *ngIf="description.Typescript.show">
+    <app-skill-description (mouseenter)="toggleDescription('Typescript', true)" [data]="description.Typescript.data"></app-skill-description>
+  </ng-container>
 </div>
-<div *ngIf="skill==='NodeJS'" class="w-20 h-20">
-  <div class="relative skill_wrapper">
+<div *ngIf="skill==='NodeJS'"
+     (mouseleave)="toggleDescription('NodeJS', false)"
+     class="w-20 h-20">
+  <div (mouseenter)="toggleDescription('NodeJS', true)"
+    class="relative skill_wrapper">
     <ng-container *ngFor="let single of repeat">
       <svg style="transform: translateZ({{single+1}}px)" class="absolute skill top-0 left-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="Nodejs">
         <path fill="#34a853"
@@ -61,5 +82,7 @@
       </svg>
     </ng-container>
   </div>
-
+  <ng-container *ngIf="description.NodeJS.show">
+    <app-skill-description (mouseenter)="toggleDescription('NodeJS', true)" [data]="description.NodeJS.data"></app-skill-description>
+  </ng-container>
 </div>

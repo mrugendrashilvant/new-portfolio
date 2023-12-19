@@ -1,1 +1,13 @@
-<p>skill-description works!</p>
+<div class="border skill_card" *ngIf="data">
+  <div class="card-header">
+    <h4>{{data?.heading}}</h4>
+    <p>{{data?.subHeading}}</p>
+  </div>
+  <div class="card-body">
+    <ul>
+      <ng-container *ngFor="let single of data?.description">
+        <li>{{single}}</li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

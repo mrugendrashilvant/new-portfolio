@@ -20,11 +20,11 @@
     </div>
   -->
     <div class="z-0 md:w-1/2 md:h-3/4 w-3/4 h-2/5 border-2 absolute">
-      <app-skill [skill]="'HTML'" class="absolute top-1/2 left-0"></app-skill>
-      <app-skill [skill]="'NodeJS'" class="absolute top-1/4 left-1/4"></app-skill>
-      <app-skill [skill]="'CSS'" class="absolute top-0 left-1/2"></app-skill>
-      <app-skill [skill]="'Angular'" class="absolute top-1/2 left-full"></app-skill>
-      <app-skill [skill]="'Typescript'" class="absolute top-1/4 left-3/4"></app-skill>
+      <app-skill (mouseleave)="removeActiveSkill()" (mouseover)="bringFront('HTML')" [skill]="'HTML'" [class.z-50]="activeSkill && activeSkill==='HTML'" class="absolute top-1/2 left-0"></app-skill>
+      <app-skill (mouseleave)="removeActiveSkill()" (mouseover)="bringFront('NodeJS')" [skill]="'NodeJS'" [class.z-50]="activeSkill && activeSkill==='NodeJS'" class="absolute top-1/4 left-1/4"></app-skill>
+      <app-skill (mouseleave)="removeActiveSkill()" (mouseover)="bringFront('CSS')" [skill]="'CSS'" [class.z-50]="activeSkill && activeSkill==='CSS'" class="absolute top-0 left-1/2"></app-skill>
+      <app-skill (mouseleave)="removeActiveSkill()" (mouseover)="bringFront('Angular')" [skill]="'Angular'" [class.z-50]="activeSkill && activeSkill==='Angular'" class="absolute top-1/2 left-full"></app-skill>
+      <app-skill (mouseleave)="removeActiveSkill()" (mouseover)="bringFront('Typescript')" [skill]="'Typescript'" [class.z-50]="activeSkill && activeSkill==='Typescript'" class="absolute top-1/4 left-3/4"></app-skill>
     </div>
   </div>
 </div>

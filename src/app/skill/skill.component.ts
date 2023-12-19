@@ -66,8 +66,8 @@ export class SkillComponent {
     }
   }
 
-  toggleDescription(skill: 'CSS' | 'HTML' | 'Typescript' | 'Angular' | 'NodeJS') {
-    this.description[skill].show = !this.description[skill].show;
+  toggleDescription(skill: 'CSS' | 'HTML' | 'Typescript' | 'Angular' | 'NodeJS', show: boolean) {
+    this.description[skill].show = show;
   }
 
 }

@@ -13,6 +13,6 @@ export interface SkillDescriptionData {
   styleUrls: ['./skill-description.component.scss']
 })
 export class SkillDescriptionComponent {
-  @Input() data:any;
+  @Input() data!:SkillDescriptionData;
 
 }
