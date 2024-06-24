@@ -47,7 +47,6 @@ export class SkillComponent {
           "2 years of Experience in Product based companies",
           "Good understanding of Routing, Standalone Components, Modules",
           "Used and created custom Pipes, Services, Libraries",
-          "Clear and crisp knowledge of data-binding in Angular",
           "State Management in Angular using NGXS"
         ]
       } as SkillDescriptionData

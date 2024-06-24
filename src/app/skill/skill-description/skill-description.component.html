@@ -1,10 +1,10 @@
-<div class="border skill_card" *ngIf="data">
-  <div class="card-header">
-    <h4>{{data?.heading}}</h4>
-    <p>{{data?.subHeading}}</p>
+<div class="border skill_card rounded-lg" *ngIf="data">
+  <div class="card-header border-b-2 pb-2 mb-1">
+    <p class="text-lg">{{data?.heading}}</p>
+    <p class="text-md">{{data?.subHeading}}</p>
   </div>
   <div class="card-body">
-    <ul>
+    <ul class="text-xs">
       <ng-container *ngFor="let single of data?.description">
         <li>{{single}}</li>
       </ng-container>

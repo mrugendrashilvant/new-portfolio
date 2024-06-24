@@ -1,3 +1,9 @@
+## Features to add
+- Responsive - Mobile and Laptop
+- Story mode on scroll
+- Light and Dark mode
+- Weather animations/CSS
+
 # MyPortfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
