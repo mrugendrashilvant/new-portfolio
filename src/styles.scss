@@ -3,6 +3,49 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Tabular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("assets/fonts/OTF/Tabular-Regular.otf") format("otf");
+  }
+  @font-face {
+    font-family: 'Tabular';
+    font-style: normal;
+    font-weight: 800;
+    src: url("assets/fonts/OTF/Tabular-Bold.otf") format("otf");
+  }
+  @font-face {
+    font-family: 'Tabular';
+    font-style: normal;
+    font-weight: 100;
+    src: url("assets/fonts/OTF/Tabular-Light.otf") format("otf");
+  }
+  @font-face {
+    font-family: 'Tabular';
+    font-style: italic;
+    font-weight: 400;
+    src: url("assets/fonts/OTF/Tabular-Italic.otf") format("otf");
+  }
+  @font-face {
+    font-family: 'Tabular';
+    font-style: normal;
+    font-weight: 500;
+    src: url("assets/fonts/OTF/Tabular-Medium.otf") format("otf");
+  }
+  @font-face {
+    font-family: 'Tabular';
+    font-style: normal;
+    font-weight: 600;
+    src: url("assets/fonts/OTF/Tabular-Semibold.otf") format("otf");
+  }
+}
+
+* {
+  font-family: 'Tabular', sans-serif;
+}
+
 @keyframes bounce {
   30% { transform: scale(1.2); }
   40%, 60% { transform: rotate(-20deg) scale(1.2); }
