@@ -1,0 +1,9 @@
+main {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+
+  .child {
+    scroll-snap-align: center;
+  }
+}

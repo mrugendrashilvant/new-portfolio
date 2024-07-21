@@ -2,10 +2,11 @@ import {colors as defaultColors} from 'tailwindcss/defaultTheme';
 
 const colors = {
   ...defaultColors,
-  black: "#222831",
-  teal: "#76ABAE",
-  gray: "#EEEEEE",
-  slate: "#31363F"
+  dark: "#222831",
+  primary: "#8CB9BD",
+  light: "#FEFBF6",
+  secondary: "#ECB159",
+  tertiary: "#B67352",
 }
 
 module.exports = {
@@ -13,8 +14,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
-      colors: colors
+      colors: colors,
     },
   },
   plugins: [],
