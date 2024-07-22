@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HeroComponent} from "./sections/hero/hero.component";
 import {SkillSectionComponent} from "./sections/skill-section/skill-section.component";
 import {ExperienceComponent} from "./sections/experience/experience.component";
+import {CommonModule} from "@angular/common";
+import {HeaderComponent} from "./components/header/header.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import {ExperienceComponent} from "./sections/experience/experience.component";
     HeroComponent,
     SkillSectionComponent,
     ExperienceComponent,
+    CommonModule,
+    HeaderComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
