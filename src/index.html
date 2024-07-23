@@ -9,8 +9,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    #mouse-follower2 {
+      transition: 0.3s;
+    }
+  </style>
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <div id="mouse-follower1" class="absolute -translate-x-1/2 -translate-y-1/2 transition-transform w-4 h-4 rounded-full bg-secondary bg-opacity-50">
+  </div>
+  <div id="mouse-follower2" class="w-4 h-4 mouse-border absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-tertiary"></div>
+  <script>
+    document.body.addEventListener("mousemove", (ev) => {
+      document.getElementById("mouse-follower1").style.left = ev.clientX+"px";
+      document.getElementById("mouse-follower2").style.left = ev.clientX+"px";
+      document.getElementById("mouse-follower1").style.top = ev.clientY+"px";
+      document.getElementById("mouse-follower2").style.top = ev.clientY+"px";
+    },true)
+  </script>
 </body>
 </html>
