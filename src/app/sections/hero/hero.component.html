@@ -1,6 +1,13 @@
 <section #wrapper (mousemove)="moveEyes($event)" class="h-full">
   <div class="h-1/2">
-    <p class="text-4xl">Mrugendra</p>
+    <div class="text-6xl flex gap-3 max-h-[60px] overflow-hidden">
+      <div class="hello-texts">
+        <p>Hello</p>
+        <p>Hallo</p>
+        <p>नमस्ते</p>
+        <p>Hola</p>
+      </div>👋🏻
+    </div>
   </div>
   <div class="h-1/2 relative">
     @if (heroImageRef) {
@@ -19,6 +26,7 @@
     <div class="flex w-full h-full justify-center items-center">
       <img #heroImage (load)="imageLoaded()" class="h-full object-contain mx-auto" alt="Mrugendra Shilvant"
            src="assets/images/me.png">
+
     </div>
   </div>
 </section>

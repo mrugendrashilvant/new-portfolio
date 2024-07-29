@@ -16,6 +16,7 @@ export class HeroComponent {
   @ViewChild("leftEye") leftEye!: ElementRef<HTMLDivElement>;
   @ViewChild("rightEye") rightEye!: ElementRef<HTMLDivElement>;
   @ViewChild("wrapper") wrapper!: ElementRef<HTMLElement>;
+  showDetails: boolean = false;
 
   imageLoaded() {
     console.log(this.heroImageRef.nativeElement.width)

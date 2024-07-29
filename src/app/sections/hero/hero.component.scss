@@ -3,3 +3,26 @@
   -moz-box-shadow: 0 0 16px #fcbe41;
   box-shadow: 0 0 16px #fcbe41;
 }
+.hello-texts {
+  display: inline;
+  p{
+    height: 60px;
+    margin-bottom: 8px !important;
+    &:first-child {
+      animation: scrollText 8s infinite;
+    }
+  }
+}
+
+@keyframes scrollText {
+   0% {margin-top: 0}
+  10% {margin-top: 0;}
+  20% {margin-top: -136px;}
+  30% {margin-top: -136px;}
+  40% {margin-top: -68px;}
+  60% {margin-top: -68px;}
+  70% {margin-top: -136px;}
+  80% {margin-top: -136px;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
