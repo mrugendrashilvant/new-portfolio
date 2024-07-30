@@ -1,12 +1,12 @@
 <app-header></app-header>
-<main class="bg-light h-full">
-  <div class="h-full child container">
+<main [style.height.px]="mainHeight" class="bg-light h-full">
+  <div id="aboutMe" class="h-full child container">
     <app-hero></app-hero>
   </div>
-  <div class="h-full child container">
+  <div id="skills" class="h-full child container">
     <app-skill-section></app-skill-section>
   </div>
-  <div class="h-full child container">
+  <div id="experience" class="h-full child container">
     <app-experience></app-experience>
   </div>
 </main>

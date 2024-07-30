@@ -7,8 +7,9 @@ import {AfterViewInit, Component} from '@angular/core';
 })
 export class AppComponent implements AfterViewInit {
   title = 'my-portfolio';
+  mainHeight: number = 100;
 
   ngAfterViewInit() {
-
+    this.mainHeight = window.innerHeight - 53;
   }
 }

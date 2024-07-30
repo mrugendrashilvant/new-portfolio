@@ -15,5 +15,9 @@ import {MatIcon} from "@angular/material/icon";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  view(id: string) {
+    if(document) {
+      document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
+    }
+  }
 }
