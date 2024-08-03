@@ -36,30 +36,31 @@ export class HeroComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     gsap.registerPlugin(TextPlugin);
-    gsap.to(".name", {
+    let tl = gsap.timeline();
+
+    tl.to(".name", {
       duration: 3,
-      onComplete: () => {
-        gsap.to(".actions", {
-          duration: 2,
-          onComplete: () => {
-            this.showSkills(0)
-          },
-          text: {
-            value: "I'm a <span class='what font-bold rounded px-2 py-1'>Software Engineer</span>",
-            delimiter: ""
-          }
-        })
-      },
       text: {
         value: "I'm <em>Mrugendra Shilvant</em> 👨🏻‍💻",
         delimiter: ""
       },
       ease: "back",
+    });
+    tl.to(".actions", {
+      duration: 2,
+      onComplete: () => {
+        this.showSkills(0)
+      },
+      text: {
+        value: "I'm a <span class='what font-bold rounded px-2 py-1'>Software Engineer</span>",
+        delimiter: ""
+      }
     })
   }
 
   showSkills(index: number) {
-    let skills = [{
+    let skills = [
+      {
       text: "Frontend Developer",
       background: "#8CB9BD",
       textColor: "white"
