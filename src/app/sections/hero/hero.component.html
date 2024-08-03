@@ -1,13 +1,19 @@
 <section #wrapper (mousemove)="moveEyes($event)" class="h-full">
-  <div class="h-[40%]">
-    <div class="pt-4">
-      <div class="text-6xl flex gap-3 max-h-[60px] overflow-hidden">
+  <div class="h-[40%] flex flex-col justify-around">
+    <div>
+      <div class="text-6xl flex gap-3 max-h-[60px] overflow-hidden justify-center">
         <div class="hello-texts">
           <p>Hello</p>
           <p>Hallo</p>
           <p>नमस्ते</p>
           <p>Hola</p>
         </div> <span class="wave">👋🏻</span>
+      </div>
+    </div>
+    <div>
+      <div class="text-3xl text-center">
+        <p class="name"></p>
+        <p class="actions"></p>
       </div>
     </div>
 
